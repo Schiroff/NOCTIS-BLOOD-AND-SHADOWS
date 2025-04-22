@@ -1,7 +1,46 @@
 [gd_scene load_steps=7 format=3 uid="uid://cvpt56npa1hpg"]
 
 [ext_resource type="Script" uid="uid://cs5jvhh4au7rb" path="res://enemy.gd" id="1_alju2"]
-[ext_resource type="Texture2D" uid="uid://qhiqshoa3gcm" path="res://imagens/1 Enemies/4 - Percy/Running (32 x 32)e.png" id="2_yobsd"]
+[ext_resource type="Texture2D" uid="uid://qhiqshoa3gcm" path="res://imagens/1 Enemies/percy/Running (32 x 32)e.png" id="2_yobsd"]
+
+[sub_resource type="Animation" id="Animation_qp2us"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_yobsd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_l3kfl"]
 resource_name = "running"
@@ -44,45 +83,6 @@ tracks/2/keys = {
 "values": [0, 1, 2, 3, 4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_qp2us"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("texture:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_yobsd")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("texture:vframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("texture:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_alju2"]
 _data = {
 &"RESET": SubResource("Animation_qp2us"),
@@ -93,7 +93,7 @@ _data = {
 radius = 30.0
 height = 60.0
 
-[node name="enemy" type="CharacterBody2D" groups=["enemies"]]
+[node name="enemyt" type="CharacterBody2D" groups=["enemies"]]
 collision_mask = 3
 script = ExtResource("1_alju2")
 

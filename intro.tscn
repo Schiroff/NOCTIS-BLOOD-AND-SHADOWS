@@ -1,0 +1,187 @@
+[gd_scene load_steps=11 format=3 uid="uid://btf7y2borpb8c"]
+
+[ext_resource type="Script" uid="uid://wboaakqvxr4m" path="res://menu_principal.gd" id="1_0a7ni"]
+[ext_resource type="Texture2D" uid="uid://ccn5y2fpa4d3q" path="res://imagens/Mapa/catelo.webp" id="2_7a8ye"]
+[ext_resource type="FontFile" uid="uid://dnme76slsvmd3" path="res://imagens/Mapa/PNG/Objects/RevMiniPixel.ttf" id="2_ayt76"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7a8ye"]
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2rf6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6ycx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpxxx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk2oa"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.67342, 0.0822208, 0.21812, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0430392, 0.0430392, 0.0430391, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 10.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ufi4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_348rq"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_ayt76")
+Button/styles/disabled = SubResource("StyleBoxFlat_u2rf6")
+Button/styles/focus = SubResource("StyleBoxFlat_y6ycx")
+Button/styles/hover = SubResource("StyleBoxFlat_dpxxx")
+Button/styles/normal = SubResource("StyleBoxFlat_dk2oa")
+Button/styles/pressed = SubResource("StyleBoxFlat_7ufi4")
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0a7ni")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7a8ye")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 30
+theme_override_fonts/font = ExtResource("2_ayt76")
+text = "Há séculos, quando a lua sangrava no céu e o mundo ainda temia as criaturas que rastejavam na escuridão, nasceu Noctis.
+Um vampiro antigo, amaldiçoado com sede de sangue e condenado à eternidade. Mas ao contrário dos de sua espécie.
+Noctis escolheu outro caminho. Em vez de se perder nas trevas, ele decidiu caçá-las. Um predador de monstros. Um justiceiro sombrio.
+
+Por eras incontáveis, ele percorreu terras esquecidas, purificando o mundo de horrores inomináveis.
+Cada criatura que tombava sob sua lâmina era uma tentativa de equilibrar sua própria maldição.
+Cada batalha, uma penitência silenciosa.
+
+Agora, sussurros carregados pelo vento falam de uma fortaleza amaldiçoada, erguida entre montanhas que tocam o céu.
+Lá, um necromante, tão antigo quanto o próprio tempo, pratica rituais profanos, dando vida a um exército feito de dor e carne corrompida.
+Uma ameaça que poderia mergulhar o mundo em trevas eternas.
+
+A jornada de Noctis começa mais uma vez.
+Florestas onde a luz não ousa entrar, vilarejos onde apenas os fantasmas sussurram, e criptas onde o tempo parou aguardam seu retorno.
+Cada passo o aproxima do confronto final.
+Cada inimigo vencido revela um fragmento de um destino que não pode mais ser evitado.
+
+Noctis caminha. A noite o envolve. E nas sombras, ele é rei."
+label_settings = SubResource("LabelSettings_7a8ye")
+
+[node name="COMEÇAR" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_348rq")
+theme_override_fonts/font = ExtResource("2_ayt76")
+theme_override_font_sizes/font_size = 80
+text = "JOGAR"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/COMEÇAR" to="." method="_on_começar_pressed"]
