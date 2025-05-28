@@ -1,6 +1,5 @@
 extends Control
 
-@onready var time_counter: Label = $MarginContainer/timer_conteiner/time_counter as Label
 @onready var score_counter: Label = $MarginContainer/score_conteiner/score_counter as Label
 @onready var life_counter: Label = $MarginContainer/life_container/life_counter as Label
 

@@ -1926,7 +1926,7 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="player" parent="." instance=ExtResource("13_vc8vp")]
-position = Vector2(157, 253)
+position = Vector2(137, 238)
 
 [node name="areas de espinho" type="Node2D" parent="."]
 

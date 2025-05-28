@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -400.0
 @onready var texture := $texture as Sprite2D
 @onready var anim := $AnimationPlayer as AnimationPlayer
 
-var direction := -1
+var direction := -1	
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 

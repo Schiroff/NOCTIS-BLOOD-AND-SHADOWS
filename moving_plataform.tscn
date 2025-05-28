@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://tg5wsnyxjxgq"]
+
+[ext_resource type="Script" uid="uid://by17y3uo6wqwa" path="res://moving_plataform.gd" id="1_3lyry"]
+[ext_resource type="Texture2D" uid="uid://ce6ucrhiux67i" path="res://imagens/Mapa/PNG/Tiles/Blocks (16 x 16).png" id="1_8kq0a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lyry"]
+size = Vector2(80, 40)
+
+[node name="moving_plataform" type="Node2D"]
+light_mask = 2
+script = ExtResource("1_3lyry")
+
+[node name="plataform" type="AnimatableBody2D" parent="."]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="plataform"]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_8kq0a")
+region_enabled = true
+region_rect = Rect2(96, 64, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataform"]
+shape = SubResource("RectangleShape2D_3lyry")
+one_way_collision = true

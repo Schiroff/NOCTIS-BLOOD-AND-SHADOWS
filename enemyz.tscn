@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://ds7aohtyhcqis"]
 
-[ext_resource type="Texture2D" uid="uid://cvcdig18s3321" path="res://imagens/1 Enemies/2/Walk.png" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://cvcdig18s3321" path="res://imagens/1 Enemies/zumbi/Walk.png" id="1_7k104"]
 [ext_resource type="Script" uid="uid://cs5jvhh4au7rb" path="res://enemy.gd" id="1_iifgy"]
-[ext_resource type="Texture2D" uid="uid://duvaa0de3tkeg" path="res://imagens/1 Enemies/2/Hurt.png" id="2_4gyqm"]
-[ext_resource type="Texture2D" uid="uid://tuvc3pjtknej" path="res://imagens/1 Enemies/2/Idle.png" id="4_epg4t"]
+[ext_resource type="Texture2D" uid="uid://duvaa0de3tkeg" path="res://imagens/1 Enemies/zumbi/Hurt.png" id="2_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://tuvc3pjtknej" path="res://imagens/1 Enemies/zumbi/Idle.png" id="4_epg4t"]
 [ext_resource type="PackedScene" uid="uid://jm2tl3t18cu" path="res://hitbox.tscn" id="5_epg4t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
@@ -176,7 +176,7 @@ _data = {
 &"RESET": SubResource("Animation_qi2p4"),
 &"hurt": SubResource("Animation_iifgy"),
 &"idle": SubResource("Animation_3yqyl"),
-&"new_animation": SubResource("Animation_7k104")
+&"running": SubResource("Animation_7k104")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_epg4t"]
@@ -201,7 +201,7 @@ shape = SubResource("CapsuleShape2D_4gyqm")
 libraries = {
 &"": SubResource("AnimationLibrary_4gyqm")
 }
-autoplay = "new_animation"
+autoplay = "running"
 speed_scale = 0.5
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
