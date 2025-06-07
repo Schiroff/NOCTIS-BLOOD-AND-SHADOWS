@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmvmeyp7onfhu"]
+[gd_scene load_steps=5 format=3 uid="uid://dmvmeyp7onfhu"]
 
 [ext_resource type="Script" uid="uid://cannl654an5w7" path="res://control.gd" id="1_8sq4i"]
 [ext_resource type="FontFile" uid="uid://dnme76slsvmd3" path="res://imagens/Mapa/PNG/Objects/RevMiniPixel.ttf" id="2_640wx"]
 [ext_resource type="Texture2D" uid="uid://b7pbfhnqftlq4" path="res://imagens/Player/3 SteamMan/SteamMan.png" id="3_a2258"]
+[ext_resource type="Texture2D" uid="uid://dsgclm378kqux" path="res://imagens/1 Enemies/zumbi/Idle1.png" id="4_640wx"]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -28,7 +29,7 @@ theme_override_constants/margin_bottom = 12
 
 [node name="score_conteiner" type="HBoxContainer" parent="Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
 
 [node name="score_label" type="Label" parent="Control/MarginContainer/score_conteiner"]
 layout_mode = 2
@@ -62,3 +63,20 @@ theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("2_640wx")
 theme_override_font_sizes/font_size = 45
 text = "02"
+
+[node name="enimes_kill" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="enemies_label" type="TextureRect" parent="Control/MarginContainer/enimes_kill"]
+layout_mode = 2
+texture = ExtResource("4_640wx")
+
+[node name="enimes_kil_counter" type="Label" parent="Control/MarginContainer/enimes_kill"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_640wx")
+theme_override_font_sizes/font_size = 45
+text = "00"

@@ -78,8 +78,13 @@ func _on_hurtbox_body_entered(body: Node2D) -> void:
 
 func reset_player():
 	Globals.player_life = 3
-	global_position = initial_position
 	velocity = Vector2.ZERO
+
+	if Globals.current_chekpoint != null:
+		Globals.respaw_player()
+	else:
+		global_position = initial_position
+
 
 func follow_camera(camera):
 	var camera_path = camera.get_path()

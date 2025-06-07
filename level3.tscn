@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c87lj7kcjo26l"]
+[gd_scene load_steps=29 format=3 uid="uid://c87lj7kcjo26l"]
 
 [ext_resource type="Script" uid="uid://dbxibp7a5j3i0" path="res://tutorial.gd" id="1_qoi87"]
 [ext_resource type="Texture2D" uid="uid://car8vyifqtegj" path="res://imagens/Mapa/Medieval_tiles_free2.png" id="2_i6w5t"]
@@ -14,7 +14,9 @@
 [ext_resource type="Script" uid="uid://dpponebet28oi" path="res://spikes_area.gd" id="14_r45hk"]
 [ext_resource type="PackedScene" uid="uid://dmvmeyp7onfhu" path="res://hud.tscn" id="15_0m7xm"]
 [ext_resource type="Texture2D" uid="uid://bus5lh5tj7vuk" path="res://imagens/Mapa/PNG/Tiles/tile39.png" id="15_h74q7"]
+[ext_resource type="PackedScene" uid="uid://d3g7s0ooj0yo" path="res://chekpoint.tscn" id="16_qoi87"]
 [ext_resource type="AudioStream" uid="uid://qmqfch2ld4hj" path="res://sound/798705__evanboyerman__hopeful-pianostring-cinematic-ambience-drama-background-music.wav" id="17_i6w5t"]
+[ext_resource type="PackedScene" uid="uid://dgww6uqkltj5m" path="res://pause_menu.tscn" id="17_l2pgs"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_rwowx"]
 tile_data = PackedInt32Array(0, 65537, 1)
@@ -1805,6 +1807,7 @@ texture = ExtResource("8_itrrf")
 
 [node name="goal" parent="." instance=ExtResource("9_mr4ff")]
 position = Vector2(133, 1664)
+next_level = "res://level4.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
@@ -1958,6 +1961,11 @@ pitch_scale = 0.6
 autoplay = true
 
 [node name="HUD" parent="." instance=ExtResource("15_0m7xm")]
+
+[node name="chekpoint" parent="." instance=ExtResource("16_qoi87")]
+position = Vector2(138, 1170)
+
+[node name="pause_menu" parent="." instance=ExtResource("17_l2pgs")]
 
 [connection signal="body_entered" from="areas de espinho/spikes-area" to="areas de espinho/spikes-area" method="_on_body_entered"]
 [connection signal="body_entered" from="areas de espinho/spikes-area2" to="areas de espinho/spikes-area2" method="_on_body_entered"]

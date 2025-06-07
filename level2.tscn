@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bkc3aj0v1rxbm"]
+[gd_scene load_steps=25 format=3 uid="uid://bkc3aj0v1rxbm"]
 
 [ext_resource type="Script" uid="uid://dbxibp7a5j3i0" path="res://tutorial.gd" id="1_lwvnx"]
 [ext_resource type="Texture2D" uid="uid://car8vyifqtegj" path="res://imagens/Mapa/Medieval_tiles_free2.png" id="2_4ou0f"]
@@ -14,7 +14,9 @@
 [ext_resource type="AudioStream" uid="uid://qmqfch2ld4hj" path="res://sound/798705__evanboyerman__hopeful-pianostring-cinematic-ambience-drama-background-music.wav" id="14_mw4xc"]
 [ext_resource type="PackedScene" uid="uid://dmvmeyp7onfhu" path="res://hud.tscn" id="14_r8rrl"]
 [ext_resource type="Texture2D" uid="uid://bus5lh5tj7vuk" path="res://imagens/Mapa/PNG/Tiles/tile39.png" id="15_cfvhu"]
+[ext_resource type="PackedScene" uid="uid://d3g7s0ooj0yo" path="res://chekpoint.tscn" id="16_lwvnx"]
 [ext_resource type="PackedScene" uid="uid://ds7aohtyhcqis" path="res://enemyz.tscn" id="16_sl2u6"]
+[ext_resource type="PackedScene" uid="uid://dgww6uqkltj5m" path="res://pause_menu.tscn" id="17_4ou0f"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_rwowx"]
 tile_data = PackedInt32Array(0, 65537, 1)
@@ -1885,6 +1887,11 @@ position = Vector2(870, 454)
 stream = ExtResource("14_mw4xc")
 pitch_scale = 0.6
 autoplay = true
+
+[node name="chekpoint" parent="." instance=ExtResource("16_lwvnx")]
+position = Vector2(1523, 418)
+
+[node name="pause_menu" parent="." instance=ExtResource("17_4ou0f")]
 
 [connection signal="body_entered" from="areas de espinho/spikes-area2" to="areas de espinho/spikes-area2" method="_on_body_entered"]
 [connection signal="body_entered" from="areas de espinho/spikes-mini3" to="areas de espinho/spikes-mini3" method="_on_body_entered"]
