@@ -22,4 +22,11 @@ func _on_resume_pressed() -> void:
 	visible = false
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	# Primeiro, despausa o jogo
+	get_tree().paused = false
+	
+	# Reseta os dados do jogo
+	Globals.reset_game()
+	
+	# E volta para a primeira cena (exemplo: tutorial, fase 1, etc)
+	get_tree().change_scene_to_file("res://tutorial.tscn")

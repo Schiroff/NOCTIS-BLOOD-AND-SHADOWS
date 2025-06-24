@@ -41,7 +41,7 @@ text = "RESUME"
 [node name="QUIT" type="Button" parent="menu_holder"]
 layout_mode = 2
 theme = ExtResource("1_hdmo1")
-text = "QUIT GAME"
+text = "REINICIAR JOGO"
 
 [connection signal="pressed" from="menu_holder/RESUME" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="menu_holder/QUIT" to="." method="_on_quit_pressed"]

@@ -2,6 +2,7 @@ extends Node
 
 var score := 0
 var player_life := 3
+var max_life := 5
 
 var player = null
 var current_chekpoint = null

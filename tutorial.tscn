@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cl8j252timuf7"]
+[gd_scene load_steps=31 format=3 uid="uid://cl8j252timuf7"]
 
 [ext_resource type="Script" uid="uid://dbxibp7a5j3i0" path="res://tutorial.gd" id="1_yb1ct"]
 [ext_resource type="PackedScene" uid="uid://35bg846us1q8" path="res://Moeda.tscn" id="2_0lped"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dmvmeyp7onfhu" path="res://hud.tscn" id="18_g52lx"]
 [ext_resource type="PackedScene" uid="uid://tg5wsnyxjxgq" path="res://moving_plataform.tscn" id="20_dudfa"]
 [ext_resource type="PackedScene" uid="uid://dgww6uqkltj5m" path="res://pause_menu.tscn" id="22_tfgte"]
+[ext_resource type="PackedScene" uid="uid://d2fck5upe6wlh" path="res://singletons/health_potion.tscn" id="23_dyhf1"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_rwowx"]
 tile_data = PackedInt32Array(0, 65537, 1)
@@ -2090,5 +2091,8 @@ autoplay = true
 [node name="HUD" parent="." instance=ExtResource("18_g52lx")]
 
 [node name="pause_menu" parent="." instance=ExtResource("22_tfgte")]
+
+[node name="HealthPotion" parent="." instance=ExtResource("23_dyhf1")]
+position = Vector2(2858, 796)
 
 [connection signal="body_entered" from="spikes-area" to="spikes-area" method="_on_body_entered"]
